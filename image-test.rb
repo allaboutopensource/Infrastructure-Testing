@@ -12,7 +12,7 @@ control 'centos-8-image' do
     it { should be_installed }
   end
 
-  describe package('BESAgent') do
+  describe package('monitoring-Agent') do
     it { should be_installed }
   end
 
@@ -22,10 +22,6 @@ control 'centos-8-image' do
     its('protocols') { should include 'tcp' }
   end
   # Check if specific user exist exist
-  describe user('devops') do
-    it { should exist }
-  end
-
   describe user('devops') do
     it { should exist }
   end
